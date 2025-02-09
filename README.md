@@ -1,5 +1,7 @@
 **Build iOS, Android and Vision Pro apps with Supabase and NativeScript**
 
+https://github.com/user-attachments/assets/2537b038-1f1b-45ef-a24e-7134d943294a
+
 iOS, Android and Vision Pro apps flavored with [Angular](https://angular.dev), [Solid](https://solidjs.com) and [Vue](https://vuejs.org) all running [Supabase](https://supabase.com) for realtime data.
 
 - [Setup](#setup)
@@ -75,7 +77,7 @@ npx nx debug nativescript-vue visionos
 
 ## What is This?
 
-An Nx workspace with Angular, Solid and Vue (iOS, Android and Vision Pro) apps all powered by [Supabase](https://supabase.com/).
+An [Nx workspace](https://nx.dev) with Angular, Solid and Vue (iOS, Android and Vision Pro) apps all powered by [Supabase](https://supabase.com/).
 
 ### Notes
 

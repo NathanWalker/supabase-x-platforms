@@ -1,0 +1,45 @@
+{
+  "name": "nativescript-solid",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nativescript-solid/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nativescript/nx:build",
+      "options": {
+        "noHmr": true,
+        "production": true,
+        "uglify": true,
+        "release": true,
+        "forDevice": true
+      }
+    },
+    "debug": {
+      "executor": "@nativescript/nx:debug",
+      "options": {
+        "noHmr": true,
+        "uglify": false,
+        "release": false,
+        "forDevice": false,
+        "prepare": false
+      },
+      "dependsOn": ["^build"]
+    },
+    "prepare": {
+      "executor": "@nativescript/nx:prepare",
+      "options": {
+        "noHmr": true,
+        "production": true,
+        "uglify": true,
+        "release": true,
+        "forDevice": true,
+        "prepare": true
+      },
+      "dependsOn": ["^build"]
+    },
+    "clean": {
+      "executor": "@nativescript/nx:clean",
+      "options": {}
+    }
+  }
+}

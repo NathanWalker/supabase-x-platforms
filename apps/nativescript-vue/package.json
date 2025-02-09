@@ -1,0 +1,27 @@
+{
+  "name": "nsvue",
+  "main": "src/app.ts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@nativescript-use/vue": "^0.0.46",
+    "@nativescript/core": "next",
+    "@nativescript/haptics": "^3.1.0",
+    "@nativescript/supabase": "^1.0.0",
+    "@nativescript/swift-ui": "^4.0.2",
+    "@nstudio/nativescript-exoplayer": "^6.2.0",
+    "@nstudio/ui-collectionview": "~5.1.10",
+    "@valor/nativescript-websockets": "^2.0.2"
+  },
+  "devDependencies": {
+    "@nativescript/android": "~8.8.0",
+    "@nativescript/ios": "~8.8.0",
+    "@nativescript/tailwind": "^2.1.0",
+    "nativescript-vue": "3.0.0-rc.2",
+    "vue": "^3.5.0",
+    "typescript": "5.7.3"
+  }
+}

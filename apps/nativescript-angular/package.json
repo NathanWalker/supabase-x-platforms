@@ -1,0 +1,25 @@
+{
+  "name": "nsangular",
+  "main": "./src/main.ts",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@nativescript/core": "next",
+    "@nativescript/haptics": "^3.1.0",
+    "@nativescript/supabase": "^1.0.0",
+    "@nativescript/swift-ui": "^4.0.2",
+    "@nstudio/nativescript-exoplayer": "^6.2.0",
+    "@nstudio/ui-collectionview": "~5.1.10",
+    "@valor/nativescript-websockets": "^2.0.2"
+  },
+  "devDependencies": {
+    "@nativescript/android": "~8.8.0",
+    "@nativescript/ios": "~8.8.0",
+    "@nativescript/tailwind": "~2.1.0",
+    "@nativescript/visionos": "8.8.1"
+  }
+}

@@ -1,0 +1,28 @@
+repositories {
+  mavenCentral()
+  maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+   implementation 'com.github.moro56:AnimatedCheckBox:v1.0.3'
+}
+
+android {
+  compileSdkVersion 34
+  buildToolsVersion "34"
+
+  defaultConfig {
+    minSdkVersion 24
+    targetSdkVersion 34
+
+    // Version Information
+    versionCode 1
+    versionName "1.0.0"
+    
+    generatedDensities = []
+  }
+
+  aaptOptions {
+    additionalParameters "--no-version-vectors"
+  }
+}

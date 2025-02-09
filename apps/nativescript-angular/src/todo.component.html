@@ -1,0 +1,69 @@
+<ActionBar title="NativeScript Todo with Supabase"></ActionBar>
+
+<GridLayout rows="auto,auto,*">
+  <!-- visual effects -->
+  @if (isApple) {
+    <AnimatedLines rowSpan="3" [data]="lineData" class="ml-[64] mr-[64] h-[70] align-top"></AnimatedLines>
+  } @else {
+    <Video
+      rowSpan="3"
+      [src]="'~/assets/lines-' + (isDarkMode() ? 'black.mp4' : 'white.mp4')"
+      autoplay="true"
+      loop="true"
+      controls="false"
+      class="ml-[64] mr-[64] h-[100] align-top"
+      [ngClass]="{
+        'bg-white': !isDarkMode(),
+        'bg-black': isDarkMode(),
+      }"
+      (playbackReady)="videoUtils.playbackReady($event)"
+      translateY="-12"
+    ></Video>
+    <!-- helps prevent color flash on video loop of effect -->
+    <ContentView
+      rowSpan="3"
+      class="ml-[64] mr-[64] h-[100] align-top"
+      [ngClass]="{
+        'bg-white': !isDarkMode(),
+        'bg-black': isDarkMode(),
+      }"
+      (loaded)="videoUtils.loadedVideoOverlay($event)"
+      translateY="-12"
+    ></ContentView>
+  }
+  <!-- end visual effects -->
+  <GridLayout rows="auto" columns="auto,*,auto" class="mx-4 mt-1 h-12">
+    <Image src="~/assets/supabase.png" class="h-12 w-12"></Image>
+    <Image col="2" src="~/assets/angular.png" class="h-12 w-12"></Image>
+  </GridLayout>
+  <TextField
+    row="1"
+    class="m-4 rounded-md border-4 border-[#38c883] bg-[#1f7a4e] p-4 text-lg text-white"
+    hint="Type a ToDo..."
+    (loaded)="loadedInput($event)"
+    (returnPress)="save()"
+  ></TextField>
+  <GridLayout row="2">
+    <CollectionView
+      iosOverflowSafeArea="true"
+      layoutStyle="swipeWithDelete"
+      [items]="supabaseService.items()"
+      (itemTap)="toggleDone($event)"
+    >
+      <ng-template let-item="item">
+        <GridLayout rows="auto,1">
+          <GridLayout columns="auto,*" class="p-3">
+            <Checkbox [id]="item.id" [data]="item" (checkboxChange)="checkboxToggle($event)" width="50" height="50" />
+
+            <Label col="1" [text]="item.name" class="text-lg text-gray-500"></Label>
+          </GridLayout>
+          <ContentView row="1" class="bg-gray-500"></ContentView>
+        </GridLayout>
+      </ng-template>
+    </CollectionView>
+
+    @if (dataService.loading) {
+      <ActivityIndicator busy="true" color="#38c883"></ActivityIndicator>
+    }
+  </GridLayout>
+</GridLayout>

@@ -1,0 +1,7 @@
+diff --git a/node_modules/@nstudio/nativescript-exoplayer/platforms/ios/Podfile b/node_modules/@nstudio/nativescript-exoplayer/platforms/ios/Podfile
+index 8591137..c0fc8a3 100644
+--- a/node_modules/@nstudio/nativescript-exoplayer/platforms/ios/Podfile
++++ b/node_modules/@nstudio/nativescript-exoplayer/platforms/ios/Podfile
+@@ -1 +1 @@
+-pod 'ASBPlayerSubtitling'
++# pod 'ASBPlayerSubtitling'

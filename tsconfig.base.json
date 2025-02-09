@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2020",
+    "module": "esnext",
+    "lib": ["ESNext", "dom", "WebWorker", "es2020"],
+    "types": ["node"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@supabase-x-platforms/nativescript-data": ["packages/nativescript-data/src/index.ts"],
+      "@supabase-x-platforms/nativescript-ui": ["packages/nativescript-ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "platforms", "tmp"]
+}

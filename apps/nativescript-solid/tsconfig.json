@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDirs": [".", "../.."],
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "preserve",
+    "jsxImportSource": "@nativescript-dom/solidjs-types",
+    "types": ["node", "@nativescript-dom/core-types", "@nativescript-dom/solidjs-types"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noEmitHelpers": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "maxNodeModuleJsDepth": 5,
+    "baseUrl": ".",
+    "paths": {
+      "@supabase-x-platforms/nativescript-data": ["../../packages/nativescript-data/src/index.ts"],
+      "@supabase-x-platforms/nativescript-ui": ["../../packages/nativescript-ui/src/index.ts"]
+    }
+  },
+  "include": ["src", "references.d.ts"]
+}

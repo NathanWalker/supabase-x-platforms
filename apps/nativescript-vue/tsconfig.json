@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDirs": [".", "../.."],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "@supabase-x-platforms/nativescript-data": ["../../packages/nativescript-data/src/index.ts"],
+      "@supabase-x-platforms/nativescript-ui": ["../../packages/nativescript-ui/src/index.ts"]
+    }
+  }
+}

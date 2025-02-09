@@ -1,0 +1,14 @@
+diff --git a/node_modules/@nativescript/core/ui/core/view/index.ios.js b/node_modules/@nativescript/core/ui/core/view/index.ios.js
+index d73c7bd..2821201 100644
+--- a/node_modules/@nativescript/core/ui/core/view/index.ios.js
++++ b/node_modules/@nativescript/core/ui/core/view/index.ios.js
+@@ -173,7 +173,8 @@ export class View extends ViewCommon {
+             const boundsOrigin = nativeView.bounds.origin;
+             const boundsFrame = adjustedFrame || frame;
+             nativeView.bounds = CGRectMake(boundsOrigin.x, boundsOrigin.y, boundsFrame.size.width, boundsFrame.size.height);
+-            nativeView.layoutIfNeeded();
++            // causes issues with custom collectionview layouts
++            // nativeView.layoutIfNeeded();
+             this._raiseLayoutChangedEvent();
+             this._isLaidOut = true;
+         }

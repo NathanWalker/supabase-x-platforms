@@ -1,0 +1,86 @@
+/* Resets */
+* {
+  @apply font-normal;
+  horizontal-alignment: 'left';
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+Label {
+  @apply align-middle;
+}
+
+/**
+*   1. set a default size for the ActivityIndicator to be similar on ios/android
+*/
+ActivityIndicator {
+  @apply h-6 w-6; /* 1 */
+}
+
+Button {
+  @apply rounded-none border-0 bg-transparent normal-case;
+  min-width: 0;
+  min-height: 0;
+  android-elevation: 0;
+  android-dynamic-elevation-offset: 0;
+}
+
+Video {
+  @apply border-0;
+  android-elevation: 0;
+  android-dynamic-elevation-offset: 0;
+}
+
+TextField,
+TextView {
+  @apply bg-transparent text-base;
+  placeholder-color: #38c883;
+  color: #1f7a4e;
+}
+TextField[isEnabled='false'],
+TextView[isEnabled='false'] {
+  @apply bg-transparent text-base;
+  placeholder-color: gray;
+  opacity: 0.5;
+}
+/* END Resets */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Page, page-router-outlet, CollectionView, Label {
+  @apply bg-transparent text-black;
+} */
+
+.ns-dark Label {
+  @apply align-middle text-white;
+}
+
+.ns-dark Page,
+.ns-dark page-router-outlet,
+.ns-dark ActionBar,
+.ns-dark CollectionView {
+  @apply bg-black text-white;
+}
+
+.ns-light Label {
+  @apply align-middle text-black;
+}
+
+.ns-light Page,
+.ns-light page-router-outlet,
+.ns-light ActionBar,
+.ns-light CollectionView {
+  @apply bg-white text-black;
+}
+
+.h-center {
+  horizontal-align: 'center';
+}

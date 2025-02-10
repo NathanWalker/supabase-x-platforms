@@ -51,7 +51,7 @@ The Todo apps will now come to life.
 
 ## Choose your preference
 
-<img src="https://angular.dev/assets/images/press-kit/angular_icon_gradient.gif" width="60"/>
+<img src="https://angular.dev/assets/images/press-kit/angular_wordmark_gradient.png" width="100"/>
 
 ```
 npx nx debug nativescript-angular android
